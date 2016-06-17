@@ -30,7 +30,7 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
 
         btn_1_NumberAddition = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        m_btnHelloWorld = new javax.swing.JButton();
+        m_btn_helloWorld = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Programming 2 - Main Menu");
@@ -46,10 +46,10 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Select an Assignment to view.");
 
-        m_btnHelloWorld.setText("3 - SayHello");
-        m_btnHelloWorld.addActionListener(new java.awt.event.ActionListener() {
+        m_btn_helloWorld.setText("3 - Hello, World!");
+        m_btn_helloWorld.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                m_btnHelloWorldActionPerformed(evt);
+                m_btn_helloWorldActionPerformed(evt);
             }
         });
 
@@ -62,7 +62,7 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(m_btnHelloWorld, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(m_btn_helloWorld, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btn_1_NumberAddition, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(174, Short.MAX_VALUE))
         );
@@ -74,7 +74,7 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(btn_1_NumberAddition)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(m_btnHelloWorld)
+                .addComponent(m_btn_helloWorld)
                 .addContainerGap(179, Short.MAX_VALUE))
         );
 
@@ -82,16 +82,18 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
   private void btn_1_NumberAdditionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_1_NumberAdditionActionPerformed
-    Asgn_1_NumberAdditionUI naf = new Asgn_1_NumberAdditionUI();
+    Asgn_1_NumberAddition naf = new Asgn_1_NumberAddition();
     naf.setLocationRelativeTo(null);
     naf.setVisible(true);
   }//GEN-LAST:event_btn_1_NumberAdditionActionPerformed
 
-    private void m_btnHelloWorldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_m_btnHelloWorldActionPerformed
-    Asgn_3_Hello_world shw = new Asgn_3_Hello_world();
-    shw.setLocationRelativeTo(null);
-    shw.setVisible(true);
-    }//GEN-LAST:event_m_btnHelloWorldActionPerformed
+    private void m_btn_helloWorldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_m_btn_helloWorldActionPerformed
+        // TODO add your handling code here:
+    Asgn_3_HelloWorld hwf = new Asgn_3_HelloWorld();    // create HelloWorld form
+        // hwf = hello world form
+    hwf.setLocationRelativeTo(null);                    // center form on screen
+    hwf.setVisible(true);                               // display HelloWorld form
+    }//GEN-LAST:event_m_btn_helloWorldActionPerformed
 
   /**
    * @param args the command line arguments
@@ -132,6 +134,6 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_1_NumberAddition;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton m_btnHelloWorld;
+    private javax.swing.JButton m_btn_helloWorld;
     // End of variables declaration//GEN-END:variables
 }
