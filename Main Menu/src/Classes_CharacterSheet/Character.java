@@ -11,4 +11,11 @@ package Classes_CharacterSheet;
  */
 public class Character {
     
+    String equipList;
+    String skillsList;
+    
+    public Character(){
+        
+    }
+    
 }
