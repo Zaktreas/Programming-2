@@ -32,6 +32,7 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         m_btn_helloWorld = new javax.swing.JButton();
         btn_10_timeZoneClock = new javax.swing.JButton();
+        btn_11_characterSheet = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Programming 2 - Main Menu");
@@ -61,6 +62,13 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
             }
         });
 
+        btn_11_characterSheet.setText("11 - Character Sheet");
+        btn_11_characterSheet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_11_characterSheetActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -70,6 +78,7 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(btn_11_characterSheet, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btn_10_timeZoneClock, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(m_btn_helloWorld, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btn_1_NumberAddition, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -84,9 +93,11 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
                 .addComponent(btn_1_NumberAddition)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(m_btn_helloWorld)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btn_10_timeZoneClock)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_11_characterSheet)
+                .addContainerGap(121, Short.MAX_VALUE))
         );
 
         pack();
@@ -113,6 +124,13 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
         tzvf.setVisible(true);
         
     }//GEN-LAST:event_btn_10_timeZoneClockActionPerformed
+
+    private void btn_11_characterSheetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_11_characterSheetActionPerformed
+        // TODO add your handling code here:
+        Asgn_11_CharacterSheet csf = new Asgn_11_CharacterSheet();
+        csf.setLocationRelativeTo(null);
+        csf.setVisible(true);
+    }//GEN-LAST:event_btn_11_characterSheetActionPerformed
 
   /**
    * @param args the command line arguments
@@ -152,6 +170,7 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_10_timeZoneClock;
+    private javax.swing.JButton btn_11_characterSheet;
     private javax.swing.JButton btn_1_NumberAddition;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton m_btn_helloWorld;
