@@ -31,6 +31,7 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
         btn_1_NumberAddition = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         m_btn_helloWorld = new javax.swing.JButton();
+        btn_10_timeZoneClock = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Programming 2 - Main Menu");
@@ -53,6 +54,13 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
             }
         });
 
+        btn_10_timeZoneClock.setText("10 - Time Zone Clock");
+        btn_10_timeZoneClock.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_10_timeZoneClockActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -62,8 +70,9 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(btn_10_timeZoneClock, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(m_btn_helloWorld, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_1_NumberAddition, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)))
+                        .addComponent(btn_1_NumberAddition, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(174, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -75,7 +84,9 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
                 .addComponent(btn_1_NumberAddition)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(m_btn_helloWorld)
-                .addContainerGap(179, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_10_timeZoneClock)
+                .addContainerGap(145, Short.MAX_VALUE))
         );
 
         pack();
@@ -94,6 +105,14 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
     hwf.setLocationRelativeTo(null);                    // center form on screen
     hwf.setVisible(true);                               // display HelloWorld form
     }//GEN-LAST:event_m_btn_helloWorldActionPerformed
+
+    private void btn_10_timeZoneClockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_10_timeZoneClockActionPerformed
+        // TODO add your handling code here:
+        Asgn_10_NewTimeZoneClock tzvf = new Asgn_10_NewTimeZoneClock();
+        tzvf.setLocationRelativeTo(null);
+        tzvf.setVisible(true);
+        
+    }//GEN-LAST:event_btn_10_timeZoneClockActionPerformed
 
   /**
    * @param args the command line arguments
@@ -132,6 +151,7 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
   }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_10_timeZoneClock;
     private javax.swing.JButton btn_1_NumberAddition;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton m_btn_helloWorld;

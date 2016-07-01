@@ -5,12 +5,18 @@
  */
 package Assignments;
 
+import Classes.Clock;
+import Classes.WorldClock;
+
 /**
  *
  * @author jay_d_000
  */
 public class Asgn_10_NewTimeZoneClock extends javax.swing.JFrame {
-
+    
+    int adjustNum;
+    
+    WorldClock WorldClock = new WorldClock(adjustNum);
     /**
      * Creates new form Asgn_10_NewTimeZoneClock
      */
@@ -37,12 +43,14 @@ public class Asgn_10_NewTimeZoneClock extends javax.swing.JFrame {
         hourAdjustField1 = new javax.swing.JTextField();
         hourAdjustField2 = new javax.swing.JTextField();
         hourAdjustField3 = new javax.swing.JTextField();
-        getTimeButton = new javax.swing.JButton();
+        getTimeButton1 = new javax.swing.JButton();
         timeField1 = new javax.swing.JTextField();
         timeField2 = new javax.swing.JTextField();
         timeField3 = new javax.swing.JTextField();
         hourAdjustLabel = new javax.swing.JLabel();
         timeLabel = new javax.swing.JLabel();
+        getTimeButton2 = new javax.swing.JButton();
+        getTimeButton3 = new javax.swing.JButton();
 
         jTextField2.setText("jTextField2");
 
@@ -61,63 +69,112 @@ public class Asgn_10_NewTimeZoneClock extends javax.swing.JFrame {
         locationLabel.setText("Enter Location");
 
         hourAdjustField1.setText(" ");
+        hourAdjustField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hourAdjustField1ActionPerformed(evt);
+            }
+        });
 
-        getTimeButton.setText("Get Times");
+        hourAdjustField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hourAdjustField2ActionPerformed(evt);
+            }
+        });
 
-        timeField1.setText("jTextField1");
+        hourAdjustField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hourAdjustField3ActionPerformed(evt);
+            }
+        });
 
-        timeField2.setText("jTextField1");
+        getTimeButton1.setText("Get Time");
+        getTimeButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                getTimeButton1ActionPerformed(evt);
+            }
+        });
 
-        timeField3.setText("jTextField1");
+        timeField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                timeField1ActionPerformed(evt);
+            }
+        });
+
+        timeField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                timeField2ActionPerformed(evt);
+            }
+        });
+
+        timeField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                timeField3ActionPerformed(evt);
+            }
+        });
 
         hourAdjustLabel.setText("Enter Hour Adjustment");
 
         timeLabel.setText("Time");
+
+        getTimeButton2.setText("Get Time");
+        getTimeButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                getTimeButton2ActionPerformed(evt);
+            }
+        });
+
+        getTimeButton3.setText("Get Time");
+        getTimeButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                getTimeButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(91, 91, 91)
+                .addComponent(authorLabel)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(locationField3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(getTimeButton)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(hourAdjustField3)
-                                .addGap(58, 58, 58)
-                                .addComponent(timeField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(locationLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(hourAdjustLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(timeLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(locationField1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(hourAdjustField1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(timeLabel)
+                        .addGap(21, 21, 21))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(locationField2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(hourAdjustField2)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(hourAdjustField2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                                .addComponent(getTimeButton2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(locationField1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(hourAdjustField1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(getTimeButton1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(locationField3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(hourAdjustField3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(getTimeButton3)))
+                        .addGap(30, 30, 30)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(timeField1, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
                             .addComponent(timeField2)
-                            .addComponent(timeField1))))
+                            .addComponent(timeField3))))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(91, 91, 91)
-                .addComponent(authorLabel)
-                .addGap(0, 34, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,24 +191,73 @@ public class Asgn_10_NewTimeZoneClock extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(locationField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(hourAdjustField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(timeField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(16, 16, 16)
+                    .addComponent(timeField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(getTimeButton1))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(locationField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(hourAdjustField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(getTimeButton2)
                     .addComponent(timeField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(getTimeButton3)
                     .addComponent(locationField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(hourAdjustField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(timeField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(getTimeButton)
-                .addGap(0, 13, Short.MAX_VALUE))
+                .addGap(0, 22, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void hourAdjustField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hourAdjustField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hourAdjustField1ActionPerformed
+
+    private void hourAdjustField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hourAdjustField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hourAdjustField2ActionPerformed
+
+    private void hourAdjustField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hourAdjustField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hourAdjustField3ActionPerformed
+
+    private void timeField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timeField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_timeField1ActionPerformed
+
+    private void timeField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timeField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_timeField2ActionPerformed
+
+    private void timeField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timeField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_timeField3ActionPerformed
+
+    private void getTimeButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getTimeButton1ActionPerformed
+        // TODO add your handling code here:
+        String adjustStr = hourAdjustField1.getText();
+        adjustNum = Integer.parseInt(adjustStr);
+        String timeStr = WorldClock.getTime();
+        timeField1.setText(timeStr);
+    }//GEN-LAST:event_getTimeButton1ActionPerformed
+
+    private void getTimeButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getTimeButton2ActionPerformed
+        // TODO add your handling code here:
+        String adjustStr = hourAdjustField2.getText();
+        adjustNum = Integer.parseInt(adjustStr);
+        String timeStr = WorldClock.getTime();
+        timeField2.setText(timeStr);
+    }//GEN-LAST:event_getTimeButton2ActionPerformed
+
+    private void getTimeButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getTimeButton3ActionPerformed
+        // TODO add your handling code here:
+        String adjustStr = hourAdjustField3.getText();
+        adjustNum = Integer.parseInt(adjustStr);
+        String timeStr = WorldClock.getTime();
+        timeField3.setText(timeStr);
+    }//GEN-LAST:event_getTimeButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,7 +296,9 @@ public class Asgn_10_NewTimeZoneClock extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel authorLabel;
-    private javax.swing.JButton getTimeButton;
+    private javax.swing.JButton getTimeButton1;
+    private javax.swing.JButton getTimeButton2;
+    private javax.swing.JButton getTimeButton3;
     private javax.swing.JTextField hourAdjustField1;
     private javax.swing.JTextField hourAdjustField2;
     private javax.swing.JTextField hourAdjustField3;
