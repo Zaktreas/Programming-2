@@ -11,4 +11,12 @@ package Classes_CharacterSheet;
  */
 public class Warrior extends Character{
     
+    public Warrior(){
+        equipList = "Longsword, " + "Shield, "
+                + "Mail Armor";
+        skillsList = "Weapon Skill: Swords, "
+                + "Weapon Skill: Shields, "
+                + "Armor Skill: Heavy";        
+    }
+       
 }

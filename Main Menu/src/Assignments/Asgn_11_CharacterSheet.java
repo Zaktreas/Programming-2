@@ -5,7 +5,12 @@
  */
 package Assignments;
 
-import Classes_CharacterSheet.Character.*;
+import Classes_CharacterSheet.Character;
+import Classes_CharacterSheet.Warrior;
+import Classes_CharacterSheet.Mage;
+import Classes_CharacterSheet.Thief;
+import Classes_CharacterSheet.Priest;
+import Classes_CharacterSheet.Peasant;
 /**
  *
  * @author jay_d_000
@@ -54,20 +59,34 @@ public class Asgn_11_CharacterSheet extends javax.swing.JFrame {
         nameLabel.setText("Name:");
 
         classBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Warrior", "Mage", "Thief", "Priest", "Peasant" }));
+        classBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                classBoxActionPerformed(evt);
+            }
+        });
 
         classLabel.setText("Class:");
 
         skillsArea.setColumns(20);
+        skillsArea.setLineWrap(true);
         skillsArea.setRows(5);
+        skillsArea.setWrapStyleWord(true);
         jScrollPane1.setViewportView(skillsArea);
 
         equipmentArea.setColumns(20);
+        equipmentArea.setLineWrap(true);
         equipmentArea.setRows(5);
+        equipmentArea.setWrapStyleWord(true);
         jScrollPane2.setViewportView(equipmentArea);
 
         skillsLabel.setText("Skills");
 
         generateCharacterButton.setText("Generate Character");
+        generateCharacterButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generateCharacterButtonActionPerformed(evt);
+            }
+        });
 
         equipmentLabel.setText("Equipment");
 
@@ -128,6 +147,29 @@ public class Asgn_11_CharacterSheet extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void classBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_classBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_classBoxActionPerformed
+
+    private void generateCharacterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateCharacterButtonActionPerformed
+        // TODO add your handling code here:
+        String charStr = (String)classBox.getSelectedItem();
+        if (charStr.contains("Warrior"))
+            character = new Warrior();
+        else if (charStr.contains("Mage"))
+            character = new Mage();
+        else if (charStr.contains("Thief"))
+            character = new Thief();
+        else if (charStr.contains("Priest"))
+            character = new Priest();
+        else if (charStr.contains("Peasant"))
+            character = new Peasant();
+        String equipStr = character.getEquip();
+        String skillStr = character.getSkills();
+        equipmentArea.setText(equipStr);
+        skillsArea.setText(skillStr);
+    }//GEN-LAST:event_generateCharacterButtonActionPerformed
 
     /**
      * @param args the command line arguments

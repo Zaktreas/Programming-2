@@ -9,16 +9,11 @@ package Classes_CharacterSheet;
  *
  * @author jay_d_000
  */
-public class Character {
+public class Peasant extends Character{
     
-    String equipList;
-    String skillsList;
-    
-    public String getEquip(){
-        return equipList;
+    public Peasant(){
+        equipList = "Spade, " + "Common Clothes";
+        skillsList = "Local Knowledge";
     }
-    
-    public String getSkills(){
-        return skillsList;
-    }
+       
 }

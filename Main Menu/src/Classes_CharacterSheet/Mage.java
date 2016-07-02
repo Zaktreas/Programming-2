@@ -9,16 +9,13 @@ package Classes_CharacterSheet;
  *
  * @author jay_d_000
  */
-public class Character {
+public class Mage extends Character{
     
-    String equipList;
-    String skillsList;
-    
-    public String getEquip(){
-        return equipList;
+    public Mage(){
+        equipList = "Wooden Staff, " + "Spellbook, "
+                + "Silk Robe";
+        skillsList = "Weapon Skill: Staves, "
+                + "Spellcasting,";        
     }
-    
-    public String getSkills(){
-        return skillsList;
-    }
+       
 }

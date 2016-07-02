@@ -9,16 +9,12 @@ package Classes_CharacterSheet;
  *
  * @author jay_d_000
  */
-public class Character {
+public class Priest extends Character{
     
-    String equipList;
-    String skillsList;
-    
-    public String getEquip(){
-        return equipList;
+    public Priest(){
+        equipList = "Holy Symbol, " + "Prayer Book, "
+                + "Holy Vestments";
+        skillsList = "Miracles";
     }
-    
-    public String getSkills(){
-        return skillsList;
-    }
+       
 }
